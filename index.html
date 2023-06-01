@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="left_header">
+                <h1 class="rps">Rock</h1>
+                <h1 class="rps">Paper</h1>
+                <h1 class="rps">Scissors</h1>
+            </div>
+            <div id="right_header">
+                <div id="computer" class="score_board" style="margin-right: 5px;">
+                    <div class="scoring">
+                        <p class="score_card">COMPUTER</p>
+                        <p class="score_card" style="margin-top: -10px;">SCORE</p>
+                        <p id="computer-score" class="main_score">0</p>
+                    </div>
+                </div>
+                <div id="user" class="score_board" style="margin-left: 5px;">
+                    <div class="scoring">
+                        <p class="score_card">YOUR</p>
+                        <p class="score_card" style="margin-top: -10px;">SCORE</p>
+                        <p id="your-score" class="main_score">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="game">
+        <div class="hand" onclick="play('rock')">👊</div>
+        <div class="hand" onclick="play('paper')">✋</div>
+        <div class="hand" onclick="play('scissors')">✌️</div>
+    </div>
+
+    <div id="result">
+        <div id="choices">
+            <div id="user_choice">
+                <div style="font-size: 20px;" id="you_picked">YOU PICKED</div>
+                <div id="user-choice"></div>
+            </div>
+            <div id="computer_choice">
+                <div style="font-size: 20px;" id="computer_picked">COMPUTER PICKED</div>
+                <div id="computer-choice"></div>
+            </div>
+        </div>
+        <div id="result-text"></div>
+        <button id="play-again" onclick="restartGame()">Play Again</button>
+        <button id="stop-game" onclick="stopGame()">Stop</button>
+    </div>
+
+    <div id="rules-tab">
+        <button id="rules-button">RULES</button>
+        <div id="rules-content">
+            <h3 id="game_rules">Game Rules</h3>
+            <!-- <p>Here are the rules of the game:</p> -->
+            <ul>
+                <li class="rules_list">Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <br>
+                <li class="rules_list">Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                <br>
+                <br>
+                <li class="rules_list">Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <br>
+                <br>
+                <li class="rules_list">If both players lay down the same hand, each player lays down another hand</li>
+                <!-- Add more rules as needed -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
